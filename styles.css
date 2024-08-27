@@ -1,5 +1,7 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 h1{
-    font-family: poppins, sans-serif;
     padding: 10px 20px;
     border-radius: 40px;
     background: linear-gradient(rgb(14, 1, 1), rgb(0, 0, 0)) padding-box, 
@@ -26,6 +28,11 @@ header{
 }
 body{
     background-color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
 }
 
 @keyframes animation {
@@ -40,12 +47,12 @@ nav{
     gap:50px;
     padding-bottom: 10px;
     border-bottom:solid 0.5px rgba(255, 255, 255, 0.147);
+    border-color:blueviolet;
 }
 
 a{
     text-decoration: none;
     color: rgb(190, 203, 214);
-    font-family: poppins;
     font-size: 14px;
     opacity: 0;
     animation-name: animation;
@@ -58,14 +65,45 @@ a:hover{
     color:rgb(255, 255, 255);
 
 }
+.gotit{
+    background-color: rgba(0, 0, 0, 0);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto auto auto auto ;
+    align-items: center;
+    flex-direction: row;
+    color: black;
+    justify-content: center;
+}
+button{
+    cursor: pointer;
+    background-color: rgba(255, 99, 71, 0);
+    padding:7px;
+    border-radius: 15px;
+    background: linear-gradient(rgb(14, 1, 1), rgb(0, 0, 0)) padding-box, 
+    linear-gradient(45deg, rgba(211, 0, 211, 0.558), rgba(0, 89, 255, 0.59)) border-box;
+    border: 0.5px solid transparent;
+    
+}
+.gotit :hover{
+    background: linear-gradient(rgb(14, 1, 1), rgb(0, 0, 0)) padding-box, 
+    linear-gradient(45deg, rgba(56, 0, 211, 0.558), rgba(60, 255, 0, 0.59)) border-box;
+    transition: background 2s ease;
+
+}
+button a{
+    animation: none;
+    color:white;
+    opacity: 1;
+}
 .about1{
     display: flex;
     align-items: center;
     justify-content:first baseline;
     margin:50px;
     border-radius: 40px;
-    background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box, 
-                linear-gradient(45deg, rgba(255, 0, 255, 0.19), rgba(0, 89, 255, 0.234)) border-box;
+    background: linear-gradient(rgb(14, 1, 1), rgb(0, 0, 0)) padding-box, 
+    linear-gradient(45deg, rgba(211, 0, 211, 0.558), rgba(0, 89, 255, 0.59)) border-box;
     border: 0.5px solid transparent;
     animation-name: animation;
     animation-duration:1s;
@@ -97,7 +135,6 @@ a:hover{
 }
 .about2 h3{
     color:white;
-    font-family: poppins;
     font-size: 17px;
     margin: 30px 0px 30px 30px;
     font-weight: 300;
@@ -106,12 +143,14 @@ a:hover{
 }
 .about1 h3 {
     color:white;
-    font-family: poppins;
     font-size: 17px;
     margin: 30px 30px 30px 0;
     font-weight: 300;
 }
 
+nav a{
+    cursor: pointer;
+}
 @media screen and (max-width:600px) {
     #about{
         display: flex;
@@ -125,7 +164,6 @@ a:hover{
     }
     #about h3{
         color:white;
-        font-family: poppins;
         font-size: 14px;
         font-weight: 200;
         margin: 20px;
@@ -148,22 +186,4 @@ a:hover{
     nav a{
         font-size: 13px;
     }
-}
-
-footer{
-    color:rgba(255, 255, 255, 0.725);
-    font-size: 12px;
-    font-family: poppins;
-    text-align: center;
-    padding: 13px;
-    padding-top: 11px;
-    border-top:solid 0.3px rgba(255, 255, 255, 0.186)
-}
-footer a{
-    animation:none;
-    color:white;
-    opacity: 1;
-    text-decoration-color: rgba(121, 175, 154, 0.575);
-    text-decoration: underline;
-    font-size: 13px;
 }
