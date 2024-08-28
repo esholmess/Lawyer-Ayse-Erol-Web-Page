@@ -5,48 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="styles.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <header>
-        <h1>Welcome To My Official Page</h1>
+        <h1>Avukat Ayşe Erol </h1>
     </header>
     <nav>
-        <a>My Experiences</a>
-        <a>My Abilities</a>
-        <a>#</a>
+        <a href="#about" id="linkabout">Hakkında</a>
+        <a href="#contact" id="linkcont">İletişim Bilgileri</a>
+        <a href="#buroimg" id="linkburo">Büro</a>
         
         
     </nav>
     <main>
         <div class="about1" id="about">
-            <img src="./imges/webb.jpg">
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet enim illum nam placeat accusantium iste voluptas corporis, eligendi aliquam architecto nostrum officiis libero fuga temporibus sunt amet modi vitae.</h3>
+            <img src="./imges/image.png">
+            <div id="about_h3">
+            <h3>Ultra Tatlı, Süper Zeki, Tatlı mı Tatlı, Ailenizin avukatı</h3>
+            <h3> Av. Ayşe EROL</h3>
+            </div>
         </div>
-        <!--
-        <div class="about2" id="about">
-            <img src="./imges/webb.jpg">
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet enim illum nam placeat accusantium iste voluptas corporis, eligendi aliquam architecto nostrum officiis libero fuga temporibus sunt amet modi vitae.</h3>
-        </div>
+        <div id="buroab">
         <div class="about1" id="about">
-            <img src="./imges/siyah beyaz.png">
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet enim illum nam placeat accusantium iste voluptas corporis, eligendi aliquam architecto nostrum officiis libero fuga temporibus sunt amet modi vitae.</h3>
+            <img id="buroimg" src="./imges/buro2.jpg">
+            <div id="about_h3">
+            <h3>Av. Ayşe Erol Hukuk&Danışmanlık Bürosu</h3>
+            <h3>Harran / Şanlıurfa</h3>
+            <button><a id="yoltar">Yol Tarifi Al</a></button>
+        
+            </div>
         </div>
-        -->
+    </div>
         <!--Yetenekler vs. bölümü-->
+    <div id="contact">
+        <h4>İletişim Bilgileri</h4>
         <div class="gotit">
-            <button id="btn_gotit" class="github"><a href="#">Github</a></button>
-            <button id="btn_gotit" class="linkedin"><a href="https://www.linkedin.com/in/ilknur-yaren-k-51058831b/">LinkedIn</a></button>
-            <button  id="btn_gotit"class="#"><a href="https://www.instagram.com/esholmess/">Instagram</a></button>
+            <button  id="btn_gotit"class="#"><a href="https://www.instagram.com/av.ayseerol/">Instagram</a></button>
+            <button  id="btn_gotit"class="#"><a href="https://www.instagram.com/av.ayseerol/">E-Mail</a></button>
+            <button  id="btn_gotit"class="#"><a href="https://www.instagram.com/av.ayseerol/">Telefon</a></button>
 
         </div>
+    </div>
+    <a id="footer" href="https://www.linkedin.com/in/ilknur-yaren-k-51058831b/"> Created by İlknur Yaren Karakoç</a>
+    
     </main>
-    <!--
-    <footer>
-        <p>Created by <a href="https://www.linkedin.com/in/ilknur-yaren-k-51058831b/">İlknur Yaren Karakoç</a></p>
-    </footer>
-    -->
+    
+    <script>
+        //smooth transitions
+            document.getElementById('linkabout').addEventListener('click', (event) => {
+            event.preventDefault();
+            document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+        });
+        document.getElementById('linkcont').addEventListener('click', (event) => {
+            event.preventDefault();
+            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+        });
+        document.getElementById('linkburo').addEventListener('click', (event) => {
+            event.preventDefault();
+            document.querySelector('#buroab').scrollIntoView({ behavior: 'smooth' });
+        });
+       </script>
 </body>
 </html>
